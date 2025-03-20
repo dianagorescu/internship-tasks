@@ -29,6 +29,10 @@ Access http://localhost:8080 and testing the interface
 
 ![image](https://github.com/user-attachments/assets/30dee0ca-e534-4cc5-bd4e-74388ca53323)
 ![image](https://github.com/user-attachments/assets/f8d1cace-273a-4e1c-bb53-9ae9ffb16055)
+![image](https://github.com/user-attachments/assets/9a0fa5c9-cd6e-4b63-9615-2c7b2b1f263a)
+
+
+
 
 
 
