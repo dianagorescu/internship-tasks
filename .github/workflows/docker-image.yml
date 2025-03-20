@@ -26,4 +26,3 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         docker push dianagorescu/internship-tasks:${{ github.sha }}
-        docker push dianagorescu/internship-tasks:tagname
