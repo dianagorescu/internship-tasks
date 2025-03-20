@@ -63,9 +63,14 @@ So, I manually inserted the first 53 rows, as the others (54th >=) violated FK c
 pg_dump -U ituser -d company_db -F p > company_db.sql
 ```
 - The Bash script
+
 For running the script
 ```powrshell
 chmod +x script.sh
 ./script.sh
 ```
+
+The content from the log file
+![image](https://github.com/user-attachments/assets/95b31a72-71c5-41fe-bfb2-09a85d15c494)
+
 
