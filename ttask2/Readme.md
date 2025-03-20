@@ -1,4 +1,4 @@
-For the 2nd task, I ve chosen the python file. I have created a basic Dockerfile structure and filled in the fields to set up the environment and dependencies for the app.
+For the 2nd task, I ve chosen the python file. I have created a basic Dockerfile structure and filled in the fields to set up the environment and dependencies for the app..
 
 ```dockerfile
 FROM python:3.10-slim
