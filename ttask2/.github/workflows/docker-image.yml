@@ -1,0 +1,29 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}  # GitHub secret for Docker Hub username
+        password: ${{ secrets.DOCKER_PASSWORD }}  # GitHub secret for Docker Hub password or token
+
+    - name: Build Docker image
+      run: |
+        docker build -t dianagorescu/internship-tasks:${{ github.sha }} .
+
+    - name: Push Docker image to Docker Hub
+      run: |
+        docker push dianagorescu/internship-tasks:${{ github.sha }}
+        docker push dianagorescu/internship-tasks:tagname
