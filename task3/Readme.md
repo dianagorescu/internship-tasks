@@ -1,4 +1,4 @@
-For the 3nd task, I ve pulled and run a PostgreSQL container.
+### For the 3nd task, I ve pulled and run a PostgreSQL container.
 
 ```powrshell
 docker pull postgres
@@ -6,24 +6,24 @@ docker pull postgres
 docker run --name pg-container -e POSTGRES_USER=ituser -e POSTGRES_PASSWORD=pass123 -e POSTGRES_DB=company_db -p 5432:5432 -d postgres
 ```
 
-I have also ensured that the container is running
+### I have also ensured that the container is running
 ```powrshell
 docker ps
 ```
 ![image](https://github.com/user-attachments/assets/450a796a-7537-4e68-a70f-48e304a60ccc)
 
-- Access Database container
+### Access Database container
 ```powrshell
 docker exec -it pg-container bash
 psql -U ituser -d company_db
 ```
 
-- Import dataset
+### Import dataset
 ```powrshell
 psql -U ituser -d company_db -f populatedb.sql
 ```
 
-- SQL QUERIES
+## SQL QUERIES
 1. Find the total number of employees.
 ```sql
 select count(*) as total_number_employees
@@ -58,11 +58,11 @@ Here, I found out the table SALARIES was null. I investigated and caught the err
 So, I manually inserted the first 53 rows, as the others (54th >=) violated FK constraint (there are only 53 employee_ids). 
 ![image](https://github.com/user-attachments/assets/74e4a325-c9d5-44b4-9f4c-0b1143ead68d)
 
-- Dump the dataset into a file
+### Dump the dataset into a file
 ```powrshell
 pg_dump -U ituser -d company_db -F p > company_db.sql
 ```
-- The Bash script
+## The Bash script
 
 For running the script
 ```powrshell
