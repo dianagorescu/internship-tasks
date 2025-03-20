@@ -21,7 +21,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t dianagorescu/internship-tasks:${{ github.sha }} .
+        docker build -t dianagorescu/internship-tasks:${{ github.sha }} ./ttask2
 
     - name: Push Docker image to Docker Hub
       run: |
