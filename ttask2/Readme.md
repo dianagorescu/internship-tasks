@@ -15,7 +15,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 ```
 
-Local Testing:
+### Local Testing:
  - building the docker image locally
 ```powershell
 docker build -t dianagorescu/calculator .
